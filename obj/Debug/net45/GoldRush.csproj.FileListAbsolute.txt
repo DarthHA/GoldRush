@@ -1,0 +1,4 @@
+C:\Users\Administrator\Documents\My Games\Terraria\ModLoader\Mod Sources\GoldRush\obj\Debug\net45\GoldRush.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\My Games\Terraria\ModLoader\Mod Sources\GoldRush\obj\Debug\net45\GoldRush.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\My Games\Terraria\ModLoader\Mod Sources\GoldRush\obj\Debug\net45\GoldRush.AssemblyInfo.cs
+C:\Users\Administrator\Documents\My Games\Terraria\ModLoader\Mod Sources\GoldRush\obj\Debug\net45\GoldRush.csproj.CoreCompileInputs.cache

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kDqDfva7lE5UR92N7mwuPZ9pAkNY65GWuarI4hu4uvR5cLY0suBPUMNm3WBE/AwcsfpE0IbidV5S2dqpjCYDOw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Documents\\My Games\\Terraria\\ModLoader\\Mod Sources\\GoldRush\\GoldRush.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\tmodloader.codeassist\\0.1.1\\tmodloader.codeassist.0.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

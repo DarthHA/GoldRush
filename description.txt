@@ -1,0 +1,37 @@
+The Road of Gold opens！
+Use King of Greed's EGO Weapon to punch enemies heavily!
+
+
+Changelog:
+v0.2
+-Optimized some details.
+v0.3
+-Optimized some details again, and fixed some issue about gravity and mount.
+v0.4
+-After the dash, players will get a speed and a short immune frame.
+-The dash direction is related to the relative direction of the portals and players.
+-Increased the upper limit and duration of the Power of Greed.
+v0.5
+-Power of Greed will persist until you switch your weapon.
+-Power of Greed will undergo a qualitative change after hitting enemies enough times.
+-Fixed some tooltips.
+
+
+
+闪击！冲锋！
+用贪婪国王的EGO武器痛击敌人！
+
+
+更新日志：
+v0.2
+-优化了部分细节。
+v0.3
+-再次优化了部分细节，修复了与坐骑和重力相关的bug。
+v0.4
+-结束冲刺后会玩家获得一个冲刺速度和短暂的无敌帧。
+-冲刺方向与传送门和玩家相对方向有关。
+-增加了贪婪之力buff的上限和持续时间。
+v0.5
+-贪婪之力buff会在你手持闪金冲锋时一直持续。
+-贪婪之力buff会在击中敌人一定次数后发生质变。
+-修复了一些工具提示。
