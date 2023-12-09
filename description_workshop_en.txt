@@ -1,0 +1,3 @@
+This mod adds [c/FFD700:Gold Rush] from Library of Ruina/Lobotomy Corporation.
+Use King of Greed's EGO Weapon to punch enemies heavily!
+Ported from 1.3 of the same mod.
