@@ -1,66 +1,6 @@
-
 Mods: {
 	GoldRush: {
-		BuffName: {
-			BlissPower: "The Road of Gold"
-			BlissSpeed: "Gold Rush-Haste"
-			BlissStun: "Gold Rush-Stun"
-			GoldRushCD: "Gold Rush Cooldown"
-			GreedyPower: "The Road of the King"
-			VictoryPower: "Ecstasy of Triumph"
-		}
-
-		BuffDescription: {
-
-			BlissPower: 
-			'''
-			You hold the bliss tightly...
-			Increase melee damage and immune frame after being hit
-			Your melee attack will heal yourself and temporarily increase movement speed
-			Dash attack can stun the enemies for a short time
-			'''
-
-			BlissSpeed: "Your movement speed increased"
-
-			BlissStun: "Bonk! You Cannot Move!"
-
-			GoldRushCD: "You need time to prepare another dash attack."
-			
-			GreedyPower: 
-			'''
-			Your desire will never get satisfied...
-			Significantly increase melee damage, but defense and DR are decreased to 25%
-			You will heal yourself after killing enemies or dealing a amount of damage to the boss
-			Increase the cooldown of dash and reduce the number of portals, but hitting the first enemy will deal a full-screen damage
-			'''
-
-			VictoryPower: 
-			'''
-			You are immersed in the intoxication of victory...
-			Increase melee damage
-			After the power is full, the form of Gold Rush changes according to the number of Brilliant Bliss absorbed
-			'''
-		
-		}
-
-		ItemName: {
-			GoldRushItem:"Gold Rush"
-			GreedDiamond:"Brilliant Bliss"
-		}
-
-		ItemTooltip: {
-			GoldRushItem:""
-
-			GreedDiamond:
-			'''
-			You may not read this
-			If you do, drop and pick it up again
-			'''
-		}
-
-		
-		ItemTooltipExtra1: {
-			GoldRushItem:
+		ItemTooltipExtra1.GoldRushItem:
 			'''
 			[C/FF0000:ALEPH] E.G.O. Weapon
 			The weapon she used to brandish in her prime, before the greed solidified and became what it is now.
@@ -68,10 +8,7 @@ Mods: {
 			Each clout with the weapon gives a satisfying sensation to the wielder, but one must be careful not to get carried away.
 			Press [Shift] to show detailed usage
 			'''
-		}
-
-		ItemTooltipExtra2: {
-			GoldRushItem:
+		ItemTooltipExtra2.GoldRushItem:
 			'''
 			Left click to punch quickly, hit the enemy can get extra immune frame
 			Right click to create multiple pairs of Gold Portals, and then left click to sprint through the portals
@@ -80,39 +17,99 @@ Mods: {
 			When holding this weapon, the damage you take will not be larger than 50% of your max life
 			All effects will disappear when switching weapons
 			'''
-		}
-
-		ProjectileName: {
-			GoldPortal: "Gold Portal"
-			GoldPortalFake: "Gold Portal"
-			GoldRushDash: "Gold Rush"
-			GoldRushDashGlow: "Gold Rush"
-			GoldRushPen1: "Gold Rush"
-			GoldRushPen2: "Gold Rush"
-			GoldRushPenGlow1: "Gold Rush"
-			GoldRushPenGlow2: "Gold Rush"
-			GoldRushReady: "Gold Rush"
-			GoldRushSlash1: "Gold Rush"
-			GoldRushSlash2: "Gold Rush"
-			GoldRushSlashGlow1: "Gold Rush"
-			GoldRushSlashGlow2: "Gold Rush"
-			GreedAOE: "Road of the King"
-			GreedAOEEffect: "Road of the King"
-		}
 
 		Misc: {
-
 			VictoryPowerExtra:
-			'''
+				'''
 
-			Current charge percentage: {0}%
-			Current Brilliant Bliss absorbed: {1}
-			'''
-			
-		   RoG:"The Road of Gold!"
-		   RoK:"The Road of the King!"
-		
-		
+				Current charge percentage: {0}%
+				Current Brilliant Bliss absorbed: {1}
+				'''
+			RoG: The Road of Gold!
+			RoK: The Road of the King!
+		}
+
+		Buffs: {
+			BlissPower: {
+				DisplayName: The Road of Gold
+				Description:
+					'''
+					You hold the bliss tightly...
+					Increase melee damage and immune frame after being hit
+					Your melee attack will heal yourself and temporarily increase movement speed
+					Dash attack can stun the enemies for a short time
+					'''
+			}
+
+			BlissSpeed: {
+				DisplayName: Gold Rush-Haste
+				Description: Your movement speed increased
+			}
+
+			BlissStun: {
+				DisplayName: Gold Rush-Stun
+				Description: Bonk! You Cannot Move!
+			}
+
+			GoldRushCD: {
+				DisplayName: Gold Rush Cooldown
+				Description: You need time to prepare another dash attack.
+			}
+
+			GreedyPower: {
+				DisplayName: The Road of the King
+				Description:
+					'''
+					Your desire will never get satisfied...
+					Significantly increase melee damage, but defense and DR are decreased to 25%
+					You will heal yourself after killing enemies or dealing a amount of damage to the boss
+					Increase the cooldown of dash and reduce the number of portals, but hitting the first enemy will deal a full-screen damage
+					'''
+			}
+
+			VictoryPower: {
+				DisplayName: Ecstasy of Triumph
+				Description:
+					'''
+					You are immersed in the intoxication of victory...
+					Increase melee damage
+					After the power is full, the form of Gold Rush changes according to the number of Brilliant Bliss absorbed
+					'''
+			}
+		}
+
+		Items: {
+			GoldRushItem: {
+				DisplayName: Gold Rush
+				Tooltip: ""
+			}
+
+			GreedDiamond: {
+				DisplayName: Brilliant Bliss
+				Tooltip:
+					'''
+					You may not read this
+					If you do, drop and pick it up again
+					'''
+			}
+		}
+
+		Projectiles: {
+			GoldPortal.DisplayName: Gold Portal
+			GoldPortalFake.DisplayName: Gold Portal
+			GoldRushDash.DisplayName: Gold Rush
+			GoldRushDashGlow.DisplayName: Gold Rush
+			GoldRushPen1.DisplayName: Gold Rush
+			GoldRushPen2.DisplayName: Gold Rush
+			GoldRushPenGlow1.DisplayName: Gold Rush
+			GoldRushPenGlow2.DisplayName: Gold Rush
+			GoldRushReady.DisplayName: Gold Rush
+			GoldRushSlash1.DisplayName: Gold Rush
+			GoldRushSlash2.DisplayName: Gold Rush
+			GoldRushSlashGlow1.DisplayName: Gold Rush
+			GoldRushSlashGlow2.DisplayName: Gold Rush
+			GreedAOE.DisplayName: Road of the King
+			GreedAOEEffect.DisplayName: Road of the King
 		}
 	}
 }

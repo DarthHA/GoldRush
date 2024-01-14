@@ -96,7 +96,7 @@ namespace GoldRush
             }
         }
 
-        public override void OnEnterWorld(Player Player)
+        public override void OnEnterWorld()
         {
             ScreenPlayerPos = Player.Center;
         }
@@ -400,32 +400,35 @@ namespace GoldRush
             return true;
         }
 
-        public override bool PreHurt(bool pvp, bool quiet, ref int damage, ref int hitDirection, ref bool crit, ref bool customDamage, ref bool playSound, ref bool genGore, ref PlayerDeathReason damageSource, ref int cooldownCounter)
+        public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable)
         {
-            if (UsingGR)
-            {
-                return false;
-            }
-            if (GRImmuneTime > 0)
-            {
-                return false;
-            }
-            if (FinalState == FType.Greed)
-            {
-                if (damage > Player.statLifeMax2 / 3)
-                {
-                    damage = Player.statLifeMax2 / 3;
-                }
-            }
-            else if (Player.HeldItem.type == ModContent.ItemType<GoldRushItem>())
-            {
-                if (damage > Player.statLifeMax2 / 2)
-                {
-                    damage = Player.statLifeMax2 / 2;
-                }
-            }
-            return true;
+            if (UsingGR) return false;
+            if (GRImmuneTime > 0) return false;
+            return false;
         }
+
+        public override void ModifyHurt(ref Player.HurtModifiers modifiers)/* tModPorter Override ImmuneTo, FreeDodge or ConsumableDodge instead to prevent taking damage */
+        {
+            modifiers.ModifyHurtInfo += (ref Player.HurtInfo info) => 
+            {
+                if (FinalState == FType.Greed)
+                {
+                    if (info.Damage > Player.statLifeMax2 / 3)
+                    {
+                        info.Damage = Player.statLifeMax2 / 3;
+                    }
+                }
+                else if (Player.HeldItem.type == ModContent.ItemType<GoldRushItem>())
+                {
+                    if (info.Damage > Player.statLifeMax2 / 2)
+                    {
+                        info.Damage = Player.statLifeMax2 / 2;
+                    }
+                }
+            };
+
+        }
+
 
         public override bool CanBeHitByProjectile(Projectile proj)
         {

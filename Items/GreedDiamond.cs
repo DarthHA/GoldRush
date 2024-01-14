@@ -12,11 +12,11 @@ namespace GoldRush.Items
         public int PickTime = 0;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Brilliant Bliss");
+            // DisplayName.SetDefault("Brilliant Bliss");
             //DisplayName.AddTranslation(GameCulture.Chinese, "幸福的碎片");
-            Tooltip.SetDefault(
+            /* Tooltip.SetDefault(
 @"You may shouldn't see this
-If you see it, drop and pick it up again");
+If you see it, drop and pick it up again"); */
             //Tooltip.AddTranslation(GameCulture.Chinese, 
 //@"你可能不该看到这个
 //如果你看到了，扔掉它然后再捡起来");

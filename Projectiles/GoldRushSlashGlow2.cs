@@ -92,7 +92,7 @@ namespace GoldRush.Projectiles
             return false;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player owner = Main.player[Projectile.owner];
             if (target.life <= 0)
@@ -127,11 +127,11 @@ namespace GoldRush.Projectiles
             return true;
         }
 
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
-            if (!crit)
+            if (Main.rand.NextBool(2))
             {
-                crit = Main.rand.NextBool();
+                modifiers.SetCrit();
             }
         }
 

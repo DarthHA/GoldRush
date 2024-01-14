@@ -107,19 +107,19 @@ namespace GoldRush.Projectiles
             }
             return null;
         }
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             Player owner = Main.player[Projectile.owner];
             if (owner.GetModPlayer<GoldRushPlayer>().FinalState == GoldRushPlayer.FType.Greed)
             {
                 if (target.life <= target.lifeMax / 2)
                 {
-                    crit = true;
+                    modifiers.SetCrit();
                 }
             }
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player owner = Main.player[Projectile.owner];
             if (owner.GetModPlayer<GoldRushPlayer>().FinalState == GoldRushPlayer.FType.Empty)
@@ -140,7 +140,7 @@ namespace GoldRush.Projectiles
                 if (!GreedAOE)
                 {
                     GreedAOE = true;
-                    Projectile.NewProjectile(null,Main.screenPosition, Vector2.Zero, ModContent.ProjectileType<GreedAOE>(), (int)(damage / GoldRush.DashModifier / 2f), 0, Projectile.owner);
+                    Projectile.NewProjectile(null,Main.screenPosition, Vector2.Zero, ModContent.ProjectileType<GreedAOE>(), (int)(damageDone / GoldRush.DashModifier / 2f), 0, Projectile.owner);
                     Projectile.NewProjectile(null,target.Center, Vector2.Zero, ModContent.ProjectileType<GreedAOEEffect>(), 0, 0, Projectile.owner);
                 }
             }

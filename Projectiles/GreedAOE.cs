@@ -77,7 +77,7 @@ namespace GoldRush.Projectiles
             return false;
         }
 
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             if (target.realLife != -1)
             {
@@ -86,7 +86,7 @@ namespace GoldRush.Projectiles
                 {
                     int count = SegmentCounts(owner);
                     if (count == 0) count = 1;
-                    damage /= (int)Math.Pow(count, 0.666);
+                    modifiers.FinalDamage /= (int)Math.Pow(count, 0.666);
                 }
             }
         }
@@ -108,7 +108,7 @@ namespace GoldRush.Projectiles
             return result;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             GoldRushNPC.ApplyGoldRushDeathCheck(target);
             //GoldRushNPC.DeepAddBuff(target, ModContent.BuffType<GreedyDeathCheck>(), 3);

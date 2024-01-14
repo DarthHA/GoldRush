@@ -15,7 +15,7 @@ namespace GoldRush.Buffs
             BuffID.Sets.NurseCannotRemoveDebuff[Type] = true;
         }
 
-        public override void ModifyBuffTip(ref string tip, ref int rare)
+        public override void ModifyBuffText(ref string buffName, ref string tip, ref int rare)
         {
             rare = ItemRarityID.Red;
         }

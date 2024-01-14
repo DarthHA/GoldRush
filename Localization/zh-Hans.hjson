@@ -1,65 +1,6 @@
-
 Mods: {
 	GoldRush: {
-		BuffName: {
-			BlissPower: "闪金之路"
-			BlissSpeed: "闪金冲锋-迅捷"
-			BlissStun: "击晕-闪金冲锋"
-			GoldRushCD: "闪金冲锋冷却"
-			GreedyPower: "暴君之路"
-			VictoryPower: "胜利的陶醉"
-		}
-
-		BuffDescription: {
-
-			BlissPower: 
-			'''
-			你紧握着手中的幸福...
-			增加近战伤害，延长受伤得到的无敌帧
-			近战攻击击中敌人时会治疗自己，并暂时提高移动速度
-			冲刺攻击能够短暂击晕敌人
-			'''
-
-			BlissSpeed: "你的移动速度增加"
-
-			BlissStun: "嘣！你动不了辣！"
-
-			GoldRushCD: "你需要时间来准备下次冲刺攻击"
-			
-			GreedyPower: 
-			'''
-			你的欲望永远不会得到满足...
-			大幅提高近战伤害，但防御和减伤降低为原来的25%
-			击杀普通敌怪或对boss造成一定伤害后会回复大量生命
-			延长冲刺的冷却时间并减少传送门数量，但击中第一个敌怪时会对全屏敌怪造成伤害
-			'''
-
-			VictoryPower: 
-			'''
-			你陷入了胜利的陶醉中...
-			增加近战伤害
-			在能量充满后根据吸收的幸福的碎片数量转变形态
-			'''
-		
-		}
-
-		ItemName: {
-			GoldRushItem:"闪金冲锋"
-			GreedDiamond:"幸福的碎片"
-		}
-
-		ItemTooltip: {
-			GoldRushItem:""
-
-			GreedDiamond:
-			'''
-			你可能不该看到这个
-			如果你看到了，扔掉它然后再捡起来
-			'''
-		}
-
-		ItemTooltipExtra1: {
-			GoldRushItem:
+		ItemTooltipExtra1.GoldRushItem:
 			'''
 			[c/FF0000:ALEPH]级E.G.O.武器
 			“这支拳套从一处充斥着无尽贪婪的时空而来，它能够令你全力抨击你的敌人。
@@ -68,10 +9,7 @@ Mods: {
 			但是你也很容易被这只拳套的力量带动身体。”
 			按下[Shift]以查看详细使用方法
 			'''
-		}
-
-		ItemTooltipExtra2: {
-			GoldRushItem:
+		ItemTooltipExtra2.GoldRushItem:
 			'''
 			左键出拳快速打击，命中敌人获得额外无敌帧
 			右键能制造多对传送门，然后左键依靠传送门冲刺
@@ -80,39 +18,99 @@ Mods: {
 			持有该武器时你最多受到最大生命50%的伤害
 			当切换武器时所有效果消失
 			'''
-		}
-
-		ProjectileName: {
-			GoldPortal: "闪金传送门"
-			GoldPortalFake: "闪金传送门"
-			GoldRushDash: "闪金冲锋"
-			GoldRushDashGlow: "闪金冲锋"
-			GoldRushPen1: "闪金冲锋"
-			GoldRushPen2: "闪金冲锋"
-			GoldRushPenGlow1: "闪金冲锋"
-			GoldRushPenGlow2: "闪金冲锋"
-			GoldRushReady: "闪金冲锋"
-			GoldRushSlash1: "闪金冲锋"
-			GoldRushSlash2: "闪金冲锋"
-			GoldRushSlashGlow1: "闪金冲锋"
-			GoldRushSlashGlow2: "闪金冲锋"
-			GreedAOE: "暴君之路"
-			GreedAOEEffect: "暴君之路"
-		}
 
 		Misc: {
-
 			VictoryPowerExtra:
-			'''
+				'''
 
-			当前充能百分比: {0}%
-			当前幸福的碎片吸收数: {1}
-			'''
-			
-		   RoG:"闪金之路!"
-		   RoK:"暴君之路!"
-		
-		
+				当前充能百分比: {0}%
+				当前幸福的碎片吸收数: {1}
+				'''
+			RoG: 闪金之路!
+			RoK: 暴君之路!
+		}
+
+		Buffs: {
+			BlissPower: {
+				DisplayName: 闪金之路
+				Description:
+					'''
+					你紧握着手中的幸福...
+					增加近战伤害，延长受伤得到的无敌帧
+					近战攻击击中敌人时会治疗自己，并暂时提高移动速度
+					冲刺攻击能够短暂击晕敌人
+					'''
+			}
+
+			BlissSpeed: {
+				DisplayName: 闪金冲锋-迅捷
+				Description: 你的移动速度增加
+			}
+
+			BlissStun: {
+				DisplayName: 击晕-闪金冲锋
+				Description: 嘣！你动不了辣！
+			}
+
+			GoldRushCD: {
+				DisplayName: 闪金冲锋冷却
+				Description: 你需要时间来准备下次冲刺攻击
+			}
+
+			GreedyPower: {
+				DisplayName: 暴君之路
+				Description:
+					'''
+					你的欲望永远不会得到满足...
+					大幅提高近战伤害，但防御和减伤降低为原来的25%
+					击杀普通敌怪或对boss造成一定伤害后会回复大量生命
+					延长冲刺的冷却时间并减少传送门数量，但击中第一个敌怪时会对全屏敌怪造成伤害
+					'''
+			}
+
+			VictoryPower: {
+				DisplayName: 胜利的陶醉
+				Description:
+					'''
+					你陷入了胜利的陶醉中...
+					增加近战伤害
+					在能量充满后根据吸收的幸福的碎片数量转变形态
+					'''
+			}
+		}
+
+		Items: {
+			GoldRushItem: {
+				DisplayName: 闪金冲锋
+				Tooltip: ""
+			}
+
+			GreedDiamond: {
+				DisplayName: 幸福的碎片
+				Tooltip:
+					'''
+					你可能不该看到这个
+					如果你看到了，扔掉它然后再捡起来
+					'''
+			}
+		}
+
+		Projectiles: {
+			GoldPortal.DisplayName: 闪金传送门
+			GoldPortalFake.DisplayName: 闪金传送门
+			GoldRushDash.DisplayName: 闪金冲锋
+			GoldRushDashGlow.DisplayName: 闪金冲锋
+			GoldRushPen1.DisplayName: 闪金冲锋
+			GoldRushPen2.DisplayName: 闪金冲锋
+			GoldRushPenGlow1.DisplayName: 闪金冲锋
+			GoldRushPenGlow2.DisplayName: 闪金冲锋
+			GoldRushReady.DisplayName: 闪金冲锋
+			GoldRushSlash1.DisplayName: 闪金冲锋
+			GoldRushSlash2.DisplayName: 闪金冲锋
+			GoldRushSlashGlow1.DisplayName: 闪金冲锋
+			GoldRushSlashGlow2.DisplayName: 闪金冲锋
+			GreedAOE.DisplayName: 暴君之路
+			GreedAOEEffect.DisplayName: 暴君之路
 		}
 	}
 }

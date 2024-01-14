@@ -59,12 +59,12 @@ namespace GoldRush
     {
         public override void Load()
         {
-            On.Terraria.Main.UpdateAudio += Main_UpdateAudio;
-            On.Terraria.Main.UpdateAudio_DecideOnTOWMusic += Main_UpdateAudio_DecideOnTOWMusic;
-            On.Terraria.Main.UpdateAudio_DecideOnNewMusic += Main_UpdateAudio_DecideOnNewMusic;
+            Terraria.On_Main.UpdateAudio += Main_UpdateAudio;
+            Terraria.On_Main.UpdateAudio_DecideOnTOWMusic += Main_UpdateAudio_DecideOnTOWMusic;
+            Terraria.On_Main.UpdateAudio_DecideOnNewMusic += Main_UpdateAudio_DecideOnNewMusic;
         }
 
-        private void Main_UpdateAudio_DecideOnNewMusic(On.Terraria.Main.orig_UpdateAudio_DecideOnNewMusic orig, Main self)
+        private void Main_UpdateAudio_DecideOnNewMusic(Terraria.On_Main.orig_UpdateAudio_DecideOnNewMusic orig, Main self)
         {
             orig.Invoke(self);
             if (Main.gameMenu || Main.myPlayer == -1 || !Main.LocalPlayer.active) return;
@@ -74,7 +74,7 @@ namespace GoldRush
             Main.newMusic = music;
         }
 
-        private void Main_UpdateAudio_DecideOnTOWMusic(On.Terraria.Main.orig_UpdateAudio_DecideOnTOWMusic orig, Main self)
+        private void Main_UpdateAudio_DecideOnTOWMusic(Terraria.On_Main.orig_UpdateAudio_DecideOnTOWMusic orig, Main self)
         {
             orig.Invoke(self);
             if (Main.gameMenu || Main.myPlayer == -1 || !Main.LocalPlayer.active) return;
@@ -98,12 +98,12 @@ namespace GoldRush
 
         public override void Unload()
         {
-            On.Terraria.Main.UpdateAudio -= Main_UpdateAudio;
-            On.Terraria.Main.UpdateAudio_DecideOnTOWMusic -= Main_UpdateAudio_DecideOnTOWMusic;
-            On.Terraria.Main.UpdateAudio_DecideOnNewMusic -= Main_UpdateAudio_DecideOnNewMusic;
+            Terraria.On_Main.UpdateAudio -= Main_UpdateAudio;
+            Terraria.On_Main.UpdateAudio_DecideOnTOWMusic -= Main_UpdateAudio_DecideOnTOWMusic;
+            Terraria.On_Main.UpdateAudio_DecideOnNewMusic -= Main_UpdateAudio_DecideOnNewMusic;
         }
 
-        private void Main_UpdateAudio(On.Terraria.Main.orig_UpdateAudio orig, Main self)
+        private void Main_UpdateAudio(Terraria.On_Main.orig_UpdateAudio orig, Main self)
         {
             orig.Invoke(self);
             if (Main.gameMenu || Main.myPlayer == -1 || !Main.LocalPlayer.active)

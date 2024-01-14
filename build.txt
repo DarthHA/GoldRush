@@ -1,5 +1,5 @@
 displayName = [c/FFD700:Gold Rush(闪金冲锋)]
 author = Volknet_Online(网络核心)
-version = 0.2
+version = 0.3
 homepage = https://space.bilibili.com/442236013
 includeSource = true

@@ -19,7 +19,7 @@ namespace GoldRush.Buffs
 
 
 
-        public override void ModifyBuffTip(ref string tip, ref int rare)
+        public override void ModifyBuffText(ref string buffName, ref string tip, ref int rare)
         {
             GoldRushPlayer modplayer = Main.LocalPlayer.GetModPlayer<GoldRushPlayer>();
             tip += string.Format(Language.GetTextValue("Mods.GoldRush.Misc.VictoryPowerExtra"), modplayer.VictoryPowerLevel * 2f, modplayer.BlissCount);
